@@ -19,14 +19,21 @@ use Maximosojo\UIBuilderPHP\Contract\WidgetInterface;
  */
 class ViewStructure
 {
-    public function __construct(private WidgetInterface $rootWidget)
+    /** @var WidgetInterface[] */
+    protected array $widgets = [];
+
+    /**
+     * Agrega un widget a la colección de la vista.
+     */
+    public function addWidget(WidgetInterface $widget): self
     {
+        $this->widgets[] = $widget;
+        return $this;
     }
 
-    public function getRootWidget(): WidgetInterface
+    /** @return WidgetInterface[] */
+    public function getWidgets(): array
     {
-        return $this->rootWidget;
+        return $this->widgets;
     }
-
-    // Aquí podrías añadir métodos para metadatos como título de la pantalla, etc.
 }

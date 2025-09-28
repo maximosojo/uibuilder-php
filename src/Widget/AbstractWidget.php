@@ -15,6 +15,9 @@ use Maximosojo\UIBuilderPHP\Contract\WidgetInterface;
 
 abstract class AbstractWidget implements WidgetInterface
 {
+    /**
+     * Propiedades específicas del widget (ej. 'height', 'title', 'font_size', etc.).
+     */
     protected array $properties = [];
 
     /**
@@ -28,15 +31,20 @@ abstract class AbstractWidget implements WidgetInterface
         $this->widget = $widgetName;
     }
 
+    public function getWidget(): string
+    {
+        return $this->widget;
+    }
+
     public function toArray(): array
     {
-        return [
-            'widget' => $this->getWidget(),
-            'props' => $this->properties,
-        ];
+        // El widget es ahora parte del array de propiedades, como lo exige tu esquema.
+        return array_merge(
+            ['widget' => $this->getWidget()], 
+            $this->properties
+        );
     }
     
-    // Método para simplificar la adición de propiedades (ej. 'text', 'color', etc.)
     protected function setProperty(string $name, $value): self
     {
         $this->properties[$name] = $value;

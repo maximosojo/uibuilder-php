@@ -18,8 +18,14 @@ class JsonSerializer implements WidgetSerializerInterface
 {
     public function serialize(ViewStructure $viewStructure): string
     {
-        // Se llama al toArray() del widget raíz y se codifica a JSON.
-        $data = $viewStructure->getRootWidget()->toArray();
-        return json_encode($data, JSON_PRETTY_PRINT);
+        $finalArray = [];
+        
+        // Iterar sobre todos los widgets y convertirlos a su representación array
+        foreach ($viewStructure->getWidgets() as $widget) {
+            $finalArray[] = $widget->toArray();
+        }
+        
+        // El resultado es el array plano de objetos JSON.
+        return json_encode($finalArray, JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR);
     }
 }

@@ -16,22 +16,17 @@ namespace Maximosojo\UIBuilderPHP\Widget;
  *
  * @author Máximo Sojo <maxsojo13@gmail.com>
  */
-class SizedBoxWidget extends AbastractWidget
-{   
-    /**
-     * Elemento tipo height
-     * @var double|null
-     */
-    protected $height = 0;
-
-	public function __construct()
+class SizedBoxWidget extends AbstractWidget
+{
+	public function __construct($height = 0.0)
 	{
         parent::__construct("sizedbox");
+        $this->setProperty('height', $height);
     }
 
     public function setHeight($height)
     {
-        $this->height = $height;
+        $this->setProperty('height', $height);
 
         return $this;
     }
