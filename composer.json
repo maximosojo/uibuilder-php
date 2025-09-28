@@ -1,0 +1,21 @@
+{
+  "name": "maximosojo/uibuilder-php",
+  "type": "php-package",
+  "description": "UIBuilder PHP",
+  "keywords": ["ui","builder","php","symfony","larabel","yii","codeigniter"],
+  "homepage": "https://maximosojo.github.io/uibuilder-php",
+  "license": "MIT",
+  "authors": [
+        {
+            "name": "Máximo Sojo",
+            "email": "maxsojo13@gmail.com"
+        }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+      "php": ">=7.1"
+  },
+  "autoload": {
+      "psr-4": { "Maximosojo\\UIBuilderPHP\\": "" }
+  }
+}
