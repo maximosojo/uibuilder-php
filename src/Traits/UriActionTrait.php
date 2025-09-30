@@ -13,7 +13,7 @@ trait UriActionTrait
 {
     public function setUriAction(UriActionInterface $uriAction)
     {
-        $this->setProperty('uri_action', $uriAction);
+        $this->setProperty('uri_action', $uriAction->toArray());
 
         return $this;
     }

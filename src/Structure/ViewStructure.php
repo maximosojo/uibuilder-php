@@ -28,6 +28,7 @@ class ViewStructure
     public function addWidget(WidgetInterface $widget): self
     {
         $this->widgets[] = $widget;
+        
         return $this;
     }
 
