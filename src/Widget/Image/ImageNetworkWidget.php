@@ -12,6 +12,7 @@
 namespace Maximosojo\UIBuilderPHP\Widget\Image;
 
 use Maximosojo\UIBuilderPHP\Widget\AbstractWidget;
+use Maximosojo\UIBuilderPHP\Traits\MarginTrait;
 
 /**
  * Widget para ImageNetworkWidget
@@ -20,6 +21,8 @@ use Maximosojo\UIBuilderPHP\Widget\AbstractWidget;
  */
 class ImageNetworkWidget extends AbstractWidget
 {
+    use MarginTrait;
+    
 	public function __construct($src)
 	{
         parent::__construct("image_network");
