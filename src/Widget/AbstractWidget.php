@@ -51,7 +51,7 @@ abstract class AbstractWidget implements WidgetInterface
         return $this;
     }
 
-    protected function getProperty(string $name, $default = null): self
+    protected function getProperty(string $name, $default = null): mixed
     {
         return $this->properties[$name] ?? $default;
     }
