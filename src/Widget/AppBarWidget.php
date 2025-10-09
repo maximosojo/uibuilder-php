@@ -51,10 +51,10 @@ class AppBarWidget extends AbstractWidget
 
     public function addAction(AppBarAction $action)
     {
-        $action = $this->getProperty('actions', []);
-        $action[] = $action;
+        $actions = $this->getProperty('actions', []);
+        $actions[] = $action->toArray();
 
-        $this->setProperty('actions', $action->toArray());
+        $this->setProperty('actions', $actions);
 
         return $this;
     }
