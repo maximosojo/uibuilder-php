@@ -28,7 +28,7 @@ class CardWidget extends AbstractWidget
     use ContentTrait;
     use UriActionTrait;
 
-	public function __construct($height = 0.0)
+	public function __construct()
 	{
         parent::__construct("card");
     }
