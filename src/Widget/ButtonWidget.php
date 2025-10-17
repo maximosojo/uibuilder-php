@@ -2,6 +2,7 @@
 
 namespace Maximosojo\UIBuilderPHP\Widget;
 
+use Maximosojo\UIBuilderPHP\Traits\PaddingTrait;
 use Maximosojo\UIBuilderPHP\Traits\TitleTrait;
 use Maximosojo\UIBuilderPHP\Traits\UriActionTrait;
 use Maximosojo\UIBuilderPHP\Traits\MarginTrait;
@@ -17,6 +18,7 @@ class ButtonWidget extends AbstractWidget implements ButtonWidgetInterface
     use TitleTrait;
     use UriActionTrait;
 	use MarginTrait;
+    use PaddingTrait;
     use IconTrait;
 
 	public function __construct()
