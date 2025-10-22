@@ -19,6 +19,7 @@ class AppBarWidget extends AbstractWidget
 	{
         parent::__construct("app_bar");
         $this->setTitle($title);
+        $this->setCenterTitle(true);
     }
 
     public function setLogo($logo)

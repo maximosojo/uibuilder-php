@@ -2,6 +2,7 @@
 
 namespace Maximosojo\UIBuilderPHP\Widget;
 
+use Maximosojo\UIBuilderPHP\Traits\MarginTrait;
 use Maximosojo\UIBuilderPHP\Traits\TextAlignTrait;
 use Maximosojo\UIBuilderPHP\Traits\TitleTrait;
 
@@ -14,6 +15,7 @@ class TitleWidget extends AbstractWidget
 {
     use TitleTrait;
     use TextAlignTrait;
+    use MarginTrait;
 
 	public function __construct()
 	{

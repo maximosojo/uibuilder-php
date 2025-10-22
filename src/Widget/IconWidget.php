@@ -12,7 +12,9 @@
 namespace Maximosojo\UIBuilderPHP\Widget;
 
 use Maximosojo\UIBuilderPHP\Traits\IconTrait;
+use Maximosojo\UIBuilderPHP\Traits\RotateTrait;
 use Maximosojo\UIBuilderPHP\Traits\SizeTrait;
+use Maximosojo\UIBuilderPHP\Traits\ColorTrait;
 
 /**
  * Widget para IconWidget
@@ -23,6 +25,8 @@ class IconWidget extends AbstractWidget
 {
     use IconTrait;
     use SizeTrait;
+    use RotateTrait;
+    use ColorTrait;
     
 	public function __construct()
 	{
