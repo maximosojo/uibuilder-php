@@ -24,4 +24,5 @@ interface UriActionInterface
     public function setIcon(?string $icon);
     public function setTitle(?string $title);
     public function setTarget($target);
+    public function toArray();
 }
