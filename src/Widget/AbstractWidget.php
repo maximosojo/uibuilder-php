@@ -12,9 +12,12 @@
 namespace Maximosojo\UIBuilderPHP\Widget;
 
 use Maximosojo\UIBuilderPHP\Contract\WidgetInterface;
+use Maximosojo\UIBuilderPHP\Traits\ExtraPropertyTrait;
 
 abstract class AbstractWidget implements WidgetInterface
 {
+    use ExtraPropertyTrait;
+    
     /**
      * Propiedades específicas del widget (ej. 'height', 'title', 'font_size', etc.).
      */
